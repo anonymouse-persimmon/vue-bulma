@@ -1,26 +1,3 @@
-$blue: saddlebrown;
-$turquoise: royalblue; //$turquoise-invert, $primary, $primary-invert, $primary-light, $primary-dark
-$cyan: plum; // $cyan-invert, $info, $info-invert, $info-light, $info-dark
-$green: mediumpurple;// $green-invert, $success, $success-invert, $success-light, $success-dark
-$yellow: orange; // $yellow-invert, $warning, $warning-invert, $warning-light, $warning-dark
-$red: hotpink; // $red-invert, $danger, $danger-invert, $danger-light, $danger-dark, $code
-$white-ter: gold; // $light, $light-invert, $scheme-main-ter, $background, $code-background, $pre-background, $scheme-main-ter, $background
-$grey-darker: darkred; // $dark, $dark-invert, $text-strong, $strong-color, $link-hover, $link-focus, $link-active
-$white: floralwhite; // $scheme-main
-$white-bis: cornsilk; // $scheme-main-bis
-$white-ter: lightyellow; // $scheme-main-ter, $background, $code-background, $pre-background
-$black: darkslategray; // $scheme-invert
-$black-bis: teal; // $scheme-invert-bis
-$black-ter: darkcyan; // $scheme-invert-ter
-$grey-lighter: silver; // $border
-$grey-light: gainsboro; // $border-hover, $border-light-hover, $link-hover-border
-$grey-lightest: snow; // $border-light
-$grey-dark: dimgray; // $text, $text-invert, $pre, $link-active-border
-$grey: darkgray; // $text-light
-
-.select select, .textarea, .input {
-  background-color: white;
-}
 .checkbox {
   transform: scale(2.0);
 }
