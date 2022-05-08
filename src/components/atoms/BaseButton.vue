@@ -5,30 +5,30 @@
       title="buttonName"
       value="buttonName"
       :class="{
-      'is-white': isWhite,
-      'is-light': isLight,
-      'is-dark': isDark,
-      'is-black': isBlack,
-      'is-text': isText,
-      'is-ghost': isGhost,
-      'is-primary': isPrimary,
-      'is-link': isLink,
-      'is-info': isInfo,
-      'is-success': isSuccess,
-      'is-warning': isWarning,
-      'is-danger': isDanger,
-      'is-loading': isLoading,
-      'is-small': isSmall,
-      'is-medium': isMedium,
-      'is-large': isLarge,
-      'is-responsive': isResponsive,
-      'is-fullwidth': isFullwidth,
-      'is-inverted': isInverted,
-      'is-outlined': isOutlined,
-      'is-rounded': isRounded
-    }"
+    'is-white': isWhite,
+    'is-light': isLight,
+    'is-dark': isDark,
+    'is-black': isBlack,
+    'is-text': isText,
+    'is-ghost': isGhost,
+    'is-primary': isPrimary,
+    'is-link': isLink,
+    'is-info': isInfo,
+    'is-success': isSuccess,
+    'is-warning': isWarning,
+    'is-danger': isDanger,
+    'is-loading': isLoading,
+    'is-small': isSmall,
+    'is-medium': isMedium,
+    'is-large': isLarge,
+    'is-responsive': isResponsive,
+    'is-fullwidth': isFullwidth,
+    'is-inverted': isInverted,
+    'is-outlined': isOutlined,
+    'is-rounded': isRounded
+  }"
       :disabled="isDisabled"
-      @click="onClick($event)"
+      @click.stop.prevent="onClick($event)"
   >
     <slot></slot>
   </button>
@@ -49,7 +49,7 @@ export default {
     outlined: { type: Boolean, default: false },
     responsive: { type: Boolean, default: true },
     rounded: { type: Boolean, default: false },
-    size: { type: String, default: "medium" },
+    size: { type: String, default: "" },
   },
   emits:['click'],
   data() {

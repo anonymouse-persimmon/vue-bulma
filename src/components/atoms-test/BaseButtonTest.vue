@@ -2,17 +2,17 @@
   <div>
     <section class="section">
       <h2>Base</h2>
-      <p class="eg">
+      <div class="buttons">
         <base-button
             button-id="normal"
             button-name="normal">
           Normal
         </base-button>
-      </p>
+      </div>
     </section>
     <section class="section">
       <h2>Color</h2>
-      <p class="eg">
+      <div class="buttons">
         <base-button
             button-id="white"
             button-name="white"
@@ -22,7 +22,7 @@
         <base-button
             button-id="light"
             button-name="light"
-            :light=true>
+            light>
           Light
         </base-button>
         <base-button
@@ -49,8 +49,8 @@
             buttonType="ghost">
           Ghost
         </base-button>
-      </p>
-      <p class="eg">
+      </div>
+      <div class="buttons">
         <base-button
             button-id="primary"
             button-name="primary"
@@ -87,55 +87,55 @@
             buttonType="danger">
           Danger
         </base-button>
-      </p>
-      <p class="eg">
+      </div>
+      <div class="buttons">
         <base-button
             button-id="primary light"
             button-name="primary light"
             buttonType="primary"
-            :light="true">
+            light>
           Primary Light
         </base-button>
         <base-button
             button-id="link light"
             button-name="link light"
             buttonType="link"
-            :light="true">
+            light>
           Link Light
         </base-button>
         <base-button
             button-id="info light"
             button-name="info light"
             buttonType="info"
-            :light="true">
+            light>
           Info Light
         </base-button>
         <base-button
             button-id="success light"
             button-name="success light"
             buttonType="success"
-            :light="true">
+            light>
           Success Light
         </base-button>
         <base-button
             button-id="warning light"
             button-name="warning light"
             buttonType="warning"
-            :light="true">
+            light>
           Warning Light
         </base-button>
         <base-button
             button-id="danger light"
             button-name="danger light"
             buttonType="danger"
-            :light="true">
+            light>
           Danger Light
         </base-button>
-      </p>
+      </div>
     </section>
     <section class="section">
       <h2>Size</h2>
-      <p class="eg">
+      <div class="buttons">
         <base-button
             button-id="small"
             button-name="small"
@@ -154,98 +154,95 @@
             size="large">
           Large
         </base-button>
-      </p>
-      <p>
-        <base-button
-            button-id="fullwidth"
-            button-name="fullwidth"
-            :fullwidth="true">
-          Fullwidth
-        </base-button>
-
-      </p>
+      </div>
+      <base-button
+          button-id="fullwidth"
+          button-name="fullwidth"
+          :fullwidth="true">
+        Fullwidth
+      </base-button>
     </section>
     <section class="section">
       <h2>Outlined</h2>
-      <p class="eg">
+      <div class="buttons">
         <base-button
             button-id="outlined dark"
             button-name="outlined dark"
             buttonType="dark"
-            :outlined="true">
+            outlined>
           Dark Outlined
         </base-button>
         <base-button
             button-id="outlined primary"
             button-name="outlined primary"
             buttonType="primary"
-            :outlined="true">
+            outlined>
           Primary Outlined
         </base-button>
         <base-button
             button-id="outlined info"
             button-name="outlined info"
             buttonType="info"
-            :outlined="true">
+            outlined>
           Info Outlined
         </base-button>
-      </p>
+      </div>
     </section>
     <section class="section">
       <h2>Inverted</h2>
-      <p class="eg">
+      <div class="buttons">
         <base-button
             button-id="inverted dark"
             button-name="inverted dark"
             buttonType="dark"
-            :inverted="true">
+            inverted>
           Dark Inverted
         </base-button>
         <base-button
             button-id="inverted primary"
             button-name="inverted primary"
             buttonType="primary"
-            :inverted="true">
+            inverted>
           Primary Inverted
         </base-button>
         <base-button
             button-id="inverted Info"
             button-name="inverted Info"
             buttonType="info"
-            :inverted="true">
+            inverted>
           Info Inverted
         </base-button>
-      </p>
+      </div>
     </section>
     <section class="section">
       <h2>Rounded</h2>
-      <p class="eg">
+      <div class="buttons">
         <base-button
             button-id="rounded dark"
             button-name="rounded dark"
             buttonType="dark"
-            :rounded="true">
+            rounded>
           Dark Rounded
         </base-button>
         <base-button
             button-id="rounded primary"
             button-name="rounded primary"
             buttonType="primary"
-            :rounded="true">
+            rounded>
           Primary Rounded
         </base-button>
         <base-button
             button-id="rounded info"
             button-name="rounded info"
             buttonType="info"
-            :rounded="true">
+            rounded>
           Info Rounded
         </base-button>
-      </p>
+      </div>
     </section>
     <section class="section">
       <h2>Loading</h2>
-      <p class="eg">
+      <div class="buttons">
         <base-button
             button-id="loading"
             button-name="loading"
@@ -254,37 +251,37 @@
         >
           Loading
         </base-button>
-      </p>
+      </div>
     </section>
     <section class="section">
       <h2>Disabled</h2>
-      <p class="eg">
+      <div class="buttons">
         <base-button
             button-id="disabled dark"
             button-name="disabled dark"
             buttonType="dark"
-            :disabled="true">
+            disabled>
           Dark Disabled
         </base-button>
         <base-button
             button-id="disabled primary"
             button-name="disabled primary"
             buttonType="primary"
-            :disabled="true">
+            disabled>
           Primary Disabled
         </base-button>
         <base-button
             button-id="disabled info"
             button-name="disabled info"
             buttonType="info"
-            :disabled="true">
+            disabled>
           Info Disabled
         </base-button>
-      </p>
+      </div>
     </section>
     <section class="section">
       <h2>Icon Button</h2>
-      <p class="eg">
+      <div class="buttons">
         <base-button
             button-id="icon"
             button-name="icon"
@@ -294,19 +291,181 @@
           </span>
           <span>ボタンの名前</span>
         </base-button>
-      </p>
+      </div>
     </section>
-
+    <section class="section">
+      <h2>Buttons Alignment</h2>
+      <base-buttons>
+        <base-button
+            button-id="buttons1-1"
+            button-name="buttons1-1"
+            buttonType="success">
+          buttons1-1
+        </base-button>
+        <base-button
+            button-id="buttons1-2"
+            button-name="buttons1-2">
+          buttons1-2
+        </base-button>
+        <base-button
+            button-id="buttons1-3"
+            button-name="buttons1-3">
+          buttons1-3
+        </base-button>
+      </base-buttons>
+      <base-buttons alignment="center">
+        <base-button
+            button-id="buttons2-1"
+            button-name="buttons2-1"
+            buttonType="success">
+          buttons2-1
+        </base-button>
+        <base-button
+            button-id="buttons2-2"
+            button-name="buttons2-2">
+          buttons2-2
+        </base-button>
+        <base-button
+            button-id="buttons2-3"
+            button-name="buttons2-3">
+          buttons2-3
+        </base-button>
+      </base-buttons>
+      <base-buttons alignment="right">
+        <base-button
+            button-id="buttons3-1"
+            button-name="buttons3-1"
+            buttonType="success">
+          buttons3-1
+        </base-button>
+        <base-button
+            button-id="buttons3-2"
+            button-name="buttons3-2">
+          buttons3-2
+        </base-button>
+        <base-button
+            button-id="buttons3-3"
+            button-name="buttons3-3">
+          buttons3-3
+        </base-button>
+      </base-buttons>
+    </section>
+    <section class="section">
+      <h2>Buttons Size</h2>
+      <base-buttons
+          size="small">
+        <base-button
+            button-id="buttons4-1"
+            button-name="buttons4-1"
+            buttonType="success">
+          buttons4-1
+        </base-button>
+        <base-button
+            button-id="buttons4-2"
+            button-name="buttons4-2">
+          buttons4-2
+        </base-button>
+        <base-button
+            button-id="buttons4-3"
+            button-name="buttons4-3">
+          buttons4-3
+        </base-button>
+      </base-buttons>
+      <base-buttons>
+        <base-button
+            button-id="buttons5-1"
+            button-name="buttons5-1"
+            buttonType="success">
+          buttons5-1
+        </base-button>
+        <base-button
+            button-id="buttons5-2"
+            button-name="buttons5-2">
+          buttons5-2
+        </base-button>
+        <base-button
+            button-id="buttons5-3"
+            button-name="buttons5-3">
+          buttons5-3
+        </base-button>
+      </base-buttons>
+      <base-buttons
+          size="large">
+        <base-button
+            button-id="buttons6-1"
+            button-name="buttons6-1"
+            buttonType="success">
+          buttons6-1
+        </base-button>
+        <base-button
+            button-id="buttons6-2"
+            button-name="buttons6-2">
+          buttons6-2
+        </base-button>
+        <base-button
+            button-id="buttons6-3"
+            button-name="buttons6-3">
+          buttons6-3
+        </base-button>
+      </base-buttons>
+    </section>
+    <section class="section">
+      <h2>Buttons Addons</h2>
+      <base-buttons addons>
+        <base-button
+            button-id="buttons7-1"
+            button-name="buttons7-1"
+            buttonType="success">
+          buttons7-1
+        </base-button>
+        <base-button
+            button-id="buttons7-2"
+            button-name="buttons7-2">
+          buttons7-2
+        </base-button>
+        <base-button
+            button-id="buttons7-3"
+            button-name="buttons7-3">
+          buttons7-3
+        </base-button>
+      </base-buttons>
+      <base-buttons addons>
+        <base-button
+            button-id="buttons8-1"
+            button-name="buttons8-1">
+          <span class="icon is-small">
+            <ion-icon name="play-back-outline"></ion-icon>
+          </span>
+        </base-button>
+        <base-button
+            button-id="buttons8-2"
+            button-name="buttons8-2"
+            buttonType="success">
+          <span class="icon is-small">
+            <ion-icon name="play-outline"></ion-icon>
+          </span>
+        </base-button>
+        <base-button
+            button-id="buttons8-3"
+            button-name="buttons8-3">
+          <span class="icon is-small">
+            <ion-icon name="play-forward-outline"></ion-icon>
+          </span>
+        </base-button>
+      </base-buttons>
+    </section>
   </div>
 </template>
 
 <script>
 import BaseButton from '@/components/atoms/BaseButton'
+import BaseButtons from "@/components/atoms/BaseButtons";
 
 export default {
   name: "BaseButtonTest",
   components: {
-    BaseButton
+    BaseButton,
+    BaseButtons
   },
   data() {
     return {
