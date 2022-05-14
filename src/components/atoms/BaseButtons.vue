@@ -18,7 +18,7 @@
 export default {
   name: "BaseButtons",
   props: {
-    size: {type: String, default: "medium"},
+    size: {type: String, default: ""},
     alignment: {type: String, default: ""},
     addons: {type: Boolean, default: false}
   },
