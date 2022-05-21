@@ -1,5 +1,5 @@
 <template>
-  <base-folding-panel
+  <base-fold-panel
       panel-id="panel1"
       panelTitle="Panel1"
       class="is-primary"
@@ -7,17 +7,17 @@
     <div class="panel1">
       Panel that can be opened and closed
     </div>
-  </base-folding-panel>
+  </base-fold-panel>
 
   <br/>
 </template>
 
 <script>
-import BaseFoldingPanel from '@/components/atoms/BaseFoldingPanel'
+import BaseFoldPanel from '@/components/atoms/BaseFoldPanel'
 
 export default {
-  name: "BaseFoldingPanelTest",
-  components: {BaseFoldingPanel}
+  name: "BaseFoldPanelTest",
+  components: {BaseFoldPanel}
 }
 </script>
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="panel folding-panel">
+  <div class="panel fold-panel">
     <p
       class="panel-heading panel-heading-text"
       :class="{
@@ -18,7 +18,7 @@
       </span>
       {{ panelTitle }}
     </p>
-    <transition name="folding">
+    <transition name="fold">
       <div v-show="isUnfoldedPanel"
           class="panel-body"
       >
@@ -32,7 +32,7 @@
 
 <script>
 export default {
-  name: "FoldingPanel",
+  name: "FoldPanel",
   props: {
     panelId : {
       type: String,
@@ -80,7 +80,7 @@ export default {
 </script>
 
 <style scoped>
-.folding-panel {
+.fold-panel {
 }
 
 .panel-body {
@@ -111,13 +111,13 @@ export default {
   transition: 1s;
 }
 
-.folding-enter-active {
+.fold-enter-active {
   transition: all 0.5s ease-out;
 }
-.folding-leave-active {
+.fold-leave-active {
   transition: all 0.5s ease-in;
 }
-.folding-enter-from, .folding-leave-to {
+.fold-enter-from, .fold-leave-to {
   transform: translateY(-60%) scaleY(0);
   line-height: 0;
   opacity: 0;
