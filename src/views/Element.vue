@@ -1,13 +1,13 @@
 <template>
-  <base-button-test/>
-  <base-folding-panel-test/>
-  <base-modal-test/>
+  <base-button-test />
+  <base-folding-panel-test />
+  <base-modal-test />
 </template>
 
 <script>
-import BaseButtonTest from '@/components/atoms-test/BaseButtonTest.vue'
-import BaseFoldingPanelTest from "@/components/atoms-test/BaseFoldPanelTest";
-import BaseModalTest from "@/components/atoms-test/BaseModalTest";
+import BaseButtonTest from '@/components/BaseButtonTest.vue'
+import BaseFoldingPanelTest from "@/components/BaseFoldPanelTest";
+import BaseModalTest from "@/components/BaseModalTest";
 
 export default {
   name: "Element",

@@ -2,26 +2,34 @@
   <div>
     <transition name="unfold">
       <div
-          v-show="isShow"
-          class="modal is-active"
+        v-show="isShow"
+        class="modal is-active"
       >
-        <div class="modal-background"></div>
+        <div class="modal-background" />
         <div class="modal-card">
           <header class="modal-card-head">
             <p class="modal-card-title">
-              <slot name="header">title</slot>
+              <slot name="header">
+                title
+              </slot>
             </p>
-            <button class="delete" aria-label="close"></button>
+            <button
+              class="delete"
+              aria-label="close"
+            />
           </header>
           <section class="modal-card-body">
             <!-- Content ... -->
-            <slot>
-            </slot>
+            <slot />
           </section>
           <footer class="modal-card-foot">
             <slot name="footer">
-              <button class="button is-success">Save changes</button>
-              <button class="button">Cancel</button>
+              <button class="button is-success">
+                Save changes
+              </button>
+              <button class="button">
+                Cancel
+              </button>
             </slot>
           </footer>
         </div>
@@ -42,11 +50,6 @@ export default {
       return !!this.visibility;
     }
   },
-  methods: {
-    closeModal() {
-      this.$emit('changeModalState', { "id": this.$el.id, "visibility": false })
-    }
-  },
   mounted() {
     (this.$el.querySelectorAll('.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button') || []).forEach(($close) => {
       const $target = $close.closest('.modal')
@@ -62,6 +65,11 @@ export default {
         this.closeModal($target)
       })
     })
+  },
+  methods: {
+    closeModal() {
+      this.$emit('changeModalState', { "id": this.$el.id, "visibility": false })
+    }
   }
 }
 </script>

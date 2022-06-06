@@ -9,22 +9,22 @@
       @click="onPanelHeadingClick($event)"
     >
       <span
-          class="icon"
-          :class="{
-            'is-open-panel-icon': isUnfoldedPanel,
-            'is-close-panel-icon': isFoldedPanel
-      }">
-        <ion-icon name="chevron-forward-outline"></ion-icon>
+        class="icon"
+        :class="{
+          'is-open-panel-icon': isUnfoldedPanel,
+          'is-close-panel-icon': isFoldedPanel
+        }"
+      >
+        <ion-icon name="chevron-forward-outline" />
       </span>
       {{ panelTitle }}
     </p>
     <transition name="fold">
-      <div v-show="isUnfoldedPanel"
-          class="panel-body"
+      <div
+        v-show="isUnfoldedPanel"
+        class="panel-body"
       >
-        <slot>
-
-        </slot>
+        <slot />
       </div>
     </transition>
   </div>
@@ -63,6 +63,9 @@ export default {
       return !!this.isFolded
     }
   },
+  mounted() {
+    this.isFolded = this.initialFolded
+  },
   methods: {
     onPanelHeadingClick() {
       this.isFolded = !this.isFolded
@@ -72,9 +75,6 @@ export default {
         isFolded: this.isFolded
       })
     }
-  },
-  mounted() {
-    this.isFolded = this.initialFolded
   }
 }
 </script>

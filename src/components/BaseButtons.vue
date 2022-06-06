@@ -1,16 +1,16 @@
 <template>
   <div
-      class="buttons"
-      :class="{
+    class="buttons"
+    :class="{
       'are-small': areSmall,
       'are-medium': areMedium,
       'are-large': areLarge,
       'has-addons': hasAddons,
       'is-centered': isCentered,
       'is-right': isRight,
-      }"
+    }"
   >
-    <slot></slot>
+    <slot />
   </div>
 </template>
 

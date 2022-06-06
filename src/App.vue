@@ -1,12 +1,15 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link> |
-    <router-link to="/element">Element</router-link>
-  </div>
-  <router-view/>
+  <the-nav-bar class="is-light" />
+  <router-view />
 </template>
 
+<script>
+import TheNavBar from '@/components/TheNavBar';
+export default {
+  components: {TheNavBar}
+}
+
+</script>
 <style lang="scss">
 @import "src/assets/bulmaCustom.scss";
 @import "../node_modules/bulma/bulma.sass";

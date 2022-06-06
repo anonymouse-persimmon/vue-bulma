@@ -1,51 +1,52 @@
 <template>
   <base-buttons
-    alignment="center">
+    alignment="center"
+  >
     <base-button
-        button-id="modal-trigger1"
-        button-name="modal-trigger1"
-        button-type="dark"
-        @click="ShowModal"
+      button-id="modal-trigger1"
+      button-name="modal-trigger1"
+      button-type="dark"
+      @click="ShowModal"
     >
       モーダル1表示
     </base-button>
     <base-button
-        button-id="modal-trigger2"
-        button-name="modal-trigger2"
-        button-type="black"
-        @click="ShowModal"
+      button-id="modal-trigger2"
+      button-name="modal-trigger2"
+      button-type="black"
+      @click="ShowModal"
     >
       モーダル2表示
     </base-button>
   </base-buttons>
   <base-modal
-      id="modal-js-example1"
-      :visibility="isModalShow1"
-      @change-modal-state="ChangeModalState"
+    id="modal-js-example1"
+    :visibility="isModalShow1"
+    @change-modal-state="ChangeModalState"
   >
     <h1>モーダルのボディ1</h1>
   </base-modal>
   <base-modal
-      id="modal-js-example2"
-      :visibility="isModalShow2"
-      @change-modal-state="ChangeModalState"
+    id="modal-js-example2"
+    :visibility="isModalShow2"
+    @change-modal-state="ChangeModalState"
   >
-    <template v-slot:header>
+    <template #header>
       <h1>モーダルのタイトル2</h1>
     </template>
-    <template v-slot:default>
+    <template #default>
       <h1>モーダルのボディ2</h1>
     </template>
-    <template v-slot:footer>
+    <template #footer>
       <h1>モーダルのフッタ2</h1>
     </template>
   </base-modal>
 </template>
 
 <script>
-import BaseButton from "@/components/atoms/BaseButton";
-import BaseButtons from "@/components/atoms/BaseButtons";
-import BaseModal from "@/components/atoms/BaseModal";
+import BaseButton from "@/components/BaseButton";
+import BaseButtons from "@/components/BaseButtons";
+import BaseModal from "@/components/BaseModal";
 
 export default {
   name: "BaseModalTest",
@@ -58,19 +59,19 @@ export default {
   },
   methods: {
     ShowModal(param) {
-      if (param=="modal-trigger1") {
+      if (param==="modal-trigger1") {
         this.isModalShow1 = true;
       }
-      if (param=="modal-trigger2") {
+      if (param==="modal-trigger2") {
         this.isModalShow2 = true;
       }
     },
     ChangeModalState(param) {
       console.log(param)
-      if (param.id=="modal-js-example1") {
+      if (param.id==="modal-js-example1") {
         this.isModalShow1 = param.visibility;
       }
-      if (param.id=="modal-js-example2") {
+      if (param.id==="modal-js-example2") {
         this.isModalShow2 = param.visibility;
       }
     }

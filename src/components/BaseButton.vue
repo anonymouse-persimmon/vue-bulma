@@ -1,36 +1,36 @@
 <template>
   <button
-      type="button"
-      class="button"
-      title="buttonName"
-      value="buttonName"
-      :class="{
-    'is-white': isWhite,
-    'is-light': isLight,
-    'is-dark': isDark,
-    'is-black': isBlack,
-    'is-text': isText,
-    'is-ghost': isGhost,
-    'is-primary': isPrimary,
-    'is-link': isLink,
-    'is-info': isInfo,
-    'is-success': isSuccess,
-    'is-warning': isWarning,
-    'is-danger': isDanger,
-    'is-loading': isLoading,
-    'is-small': isSmall,
-    'is-medium': isMedium,
-    'is-large': isLarge,
-    'is-responsive': isResponsive,
-    'is-fullwidth': isFullwidth,
-    'is-inverted': isInverted,
-    'is-outlined': isOutlined,
-    'is-rounded': isRounded
-  }"
-      :disabled="isDisabled"
-      @click.stop.prevent="onClick($event)"
+    type="button"
+    class="button"
+    title="buttonName"
+    value="buttonName"
+    :class="{
+      'is-white': isWhite,
+      'is-light': isLight,
+      'is-dark': isDark,
+      'is-black': isBlack,
+      'is-text': isText,
+      'is-ghost': isGhost,
+      'is-primary': isPrimary,
+      'is-link': isLink,
+      'is-info': isInfo,
+      'is-success': isSuccess,
+      'is-warning': isWarning,
+      'is-danger': isDanger,
+      'is-loading': isLoading,
+      'is-small': isSmall,
+      'is-medium': isMedium,
+      'is-large': isLarge,
+      'is-responsive': isResponsive,
+      'is-fullwidth': isFullwidth,
+      'is-inverted': isInverted,
+      'is-outlined': isOutlined,
+      'is-rounded': isRounded
+    }"
+    :disabled="isDisabled"
+    @click.stop.prevent="onClick($event)"
   >
-    <slot></slot>
+    <slot />
   </button>
 </template>
 
