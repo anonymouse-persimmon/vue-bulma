@@ -67,11 +67,12 @@
       <div class="navbar-end">
         <div class="navbar-item">
           <base-button
-            v-show="!isLoggedIn"
+            v-show="!isAuthenticated"
             button-id="login"
             button-name="login"
             button-type="info"
             light
+            @click="login"
           >
             <span class="icon is-large">
               <ion-icon name="person-circle-outline" />
@@ -79,11 +80,12 @@
             <span>ログイン</span>
           </base-button>
           <base-button
-            v-show="isLoggedIn"
+            v-show="isAuthenticated"
             button-id="logout"
             button-name="logout"
             button-type="info"
             inverted
+            @click="logout"
           >
             <span class="icon is-large">
               <ion-icon name="walk-outline" />
@@ -97,15 +99,29 @@
 </template>
 
 <script>
-import BaseButton from "@/components/BaseButton";
+import BaseButton from "@/components/BaseButton"
+import { useAuth0 } from '@auth0/auth0-vue'
 
 export default {
   name: "TheNavBar",
   components: {BaseButton},
+  setup() {
+    const { loginWithRedirect, user, isAuthenticated, logout } = useAuth0();
+
+    return {
+      login: () => {
+        loginWithRedirect();
+      },
+      user,
+      isAuthenticated,
+      logout: () => {
+        logout({ returnTo: window.location.origin });
+      }
+    };
+  },
   data() {
     return {
       isBurgerMenu: false,
-      isLoggedIn: false
     }
   },
   methods: {
